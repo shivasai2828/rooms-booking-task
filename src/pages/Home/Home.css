@@ -48,9 +48,9 @@ i {
   transform: translateY(-60px);
   background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  width: 80vw;
   height: 100px;
-  bottom: -20px;
+  /* bottom: -20px; */
   padding: 20px;
   border-radius: 10px;
   margin-left: 30px;
@@ -194,6 +194,9 @@ i {
   .book-button {
     width: 90%;
     text-align: center;
+  }
+  .book-button {
+    width: 150px;
   }
 
   .buttons-container button {

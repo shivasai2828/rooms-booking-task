@@ -13,9 +13,9 @@ const Home = () => {
   useEffect(() => {
     const tl2 = gsap.timeline({ defaults: { ease: "power1.inOut" } });
     tl2
-      .fromTo(".home-heading-content", 2, { y: 100 }, { y: 0 })
-      .fromTo(".home-para-content", 2, { y: 100 }, { y: 0 }, "-=0.5")
-      .fromTo(".icons-container", 2, { y: 100 }, { y: 0 }, "-=1");
+      .fromTo(".home-heading-content", 1, { y: 100 }, { y: 0 })
+      .fromTo(".home-para-content", 1, { y: 100 }, { y: 0 }, "-=0.5")
+      .fromTo(".icons-container", 1, { y: 100 }, { y: 0 }, "-=1");
   });
   const onClickMinus = () => {
     setRooms(rooms - 1);
