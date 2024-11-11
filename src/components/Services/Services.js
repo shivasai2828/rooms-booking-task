@@ -1,7 +1,7 @@
-
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Services.css";
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const servicesList = [
   {
     id: 1,
@@ -58,14 +58,38 @@ const servicesList = [
     para: "Optical fiber connections provided in not only in your cabins but rather to all of the BriSphere scenic working spaces and dinning areas.",
   },
 ];
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
+  const listRef = useRef([]);
+  useEffect(() => {
+    gsap.fromTo(
+      listRef.current,
+      { x: -100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".services-container",
+          start: "top center+=100",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
   return (
     <section id="services" className="services-container">
       <h1 className="services-heading">Services</h1>
       <ul className="list-container">
-        {servicesList.map((e) => (
-          <li key={e.id} className="card-li">
+        {servicesList.map((e, index) => (
+          <li
+            key={e.id}
+            className="card-li"
+            ref={(el) => (listRef.current[index] = el)}
+          >
             {e.icon}
             <h2>{e.heading}</h2>
             <p>{e.para}</p>
