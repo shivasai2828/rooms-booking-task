@@ -1,0 +1,165 @@
+.discover-container {
+  margin-top: 120px;
+  height: 90vh;
+}
+.discover-container h1 {
+  text-align: center;
+  font-family: roboto;
+  font-size: 35px;
+}
+.icon {
+  height: 40px;
+  border-radius: 50%;
+}
+.cards-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.discover-heading {
+  font-weight: 500;
+  font-size: 45px;
+}
+.first-card {
+  display: flex;
+  border: 1px solid #cbd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  padding: 10px;
+  font-family: roboto;
+  border-radius: 8px;
+}
+.img-name-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.name-rating-container i {
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: gold;
+}
+.name-rating-container p {
+  margin-bottom: 0;
+}
+.card-second {
+  display: flex;
+  flex-direction: column;
+  font-family: roboto;
+  width: 100%;
+}
+.card-second p {
+  padding: 5px;
+}
+
+.image-second-container {
+  width: 39%;
+  height: 100%;
+  border: 1px solid #cbd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.image-second-container img {
+  width: 100%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.second-one {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+.second-one img {
+  width: 40px;
+}
+.two-cards-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 15px;
+}
+.card {
+  border-radius: 8px;
+  border: 1px solid #cbd;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: roboto;
+}
+input {
+  cursor: pointer;
+}
+
+/* Mobile view (max-width: 768px) */
+@media (max-width: 768px) {
+  .discover-container {
+    margin-top: 80px;
+    height: auto;
+  }
+
+  .discover-heading {
+    font-size: 30px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .first-card,
+  .image-second-container,
+  .two-cards-container,
+  .card {
+    width: 80%;
+  }
+
+  .image-second-container {
+    margin-bottom: 20px;
+  }
+
+  .second-one {
+    gap: 10px;
+  }
+
+  .icon {
+    height: 35px;
+  }
+
+  .name-rating-container i {
+    font-size: 13px;
+  }
+
+  .img-name-container {
+    gap: 10px;
+  }
+
+  .image-second-container img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .discover-container h1 {
+    font-size: 28px;
+  }
+
+  .first-card,
+  .card-second,
+  .card {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .name-rating-container p {
+    font-size: 14px;
+  }
+
+  .card-second p,
+  .first-card p,
+  .card p {
+    font-size: 13px;
+  }
+}
